@@ -1,0 +1,15 @@
+#canvas{
+    /*height widthはここに書いてしまうと、
+    Canvasが拡大されて当たり判定は拡大前になってしまうので書かない*/
+    border: solid gray;
+}
+
+#black{
+    background-color: #000;
+}
+#white{
+    background-color: #FFF;
+}
+#red{
+    background-color: #F00;
+}
