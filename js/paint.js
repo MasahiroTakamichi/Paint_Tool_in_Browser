@@ -90,13 +90,21 @@ function registerEvent() {
     });
 
     //
+    color.addEventListener('change', function(e) {
+        ctx.strokeStyle = e.target.value;
+        ctx.fillStyle = e.target.value;
+        fcolor = e.target.value;
+    });
 }  
-
-function changeColor(){
-    var fcolor = document.getElementsByClassName('color');
-    ctx.strokeStyle = fcolor.css("background-color");
+function checkFilled() {
+    var inputVal = document.getElementById("color");
+    if (inputVal.value == "") {
+        inputVal.style.backgroundColor = "";
+    }
+    else{
+        inputVal.style.backgroundColor = fcolor;
+    }
 }
 
-
- 
+checkFilled();
 init();
