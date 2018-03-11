@@ -9,13 +9,22 @@
             <canvas id="canvas" width="640px" height="480px">HTML5非対応</canvas><br>
 
             <div id="colormenu">
-              <input type="button" class="color" id="black" onclick="changeColor();">
-              <input type="button" class="color" id="white" onclick="changeColor();">
-              <input type="button" class="color" id="red" onclick="changeColor();">
-              <input type="color" id="color">
+                カラー<input type="color" id="color"><br>
+                ※パレットがでない場合は,色の名前か#xxx(もしくは#xxxxxx)で入力してください。<br>
+            </div>
+
+            <div id="penmenu">
+                <label for="lineWidth">線の太さ</label><input type="number" id="lineWidth" min="1" max="50" step="1" value="1">
+                <input type="range" id="lineWidthRange" min="1" max="50" step="1" value="1"><br>
+                <label for="opacity">透明度</label><input type="number" id="opacity" min="0" max="1" step="0.05" value="1">
+                <input type="range" id="opacityRange" min="0" max="1" step="0.05" value="1"><br>
+            </div>
+            <div id="menu">
+                <input type="button" id="clear" value="クリア">
+                <input type="button" id="back" value="1つ戻る">
+                <input type="button" id="save" value="保存">
             </div>
 
             <script type/javascript src="js/paint.js"></script>
 </body>
 </html>
-<!-- input type colorで色を変えられるようにする。 -->
